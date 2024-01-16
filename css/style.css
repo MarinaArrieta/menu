@@ -88,7 +88,7 @@ h2{
 h3{
     font-family: var(--titillium);
     color: var(--color-h3);
-    background-color: var(--color-fondo-h3-h3);
+    background-color: var(--color-fondo-h3);
     border-radius: 13px;
     border: 1px solid;
     font-size: 1.3em;
@@ -131,4 +131,8 @@ img{
     background-position: center;
     background-size: contain;
     width: 100%;
+}
+
+svg{
+    margin-bottom: -3px;
 }
