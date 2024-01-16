@@ -4,6 +4,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
 
+:root{
+    --rosado: #d708fb;
+    --sombra-texo-h1: -7px 4px 4px black;
+    --sobra-seccion: 1px 15px 41px 0px #edbaf3d4;
+    --color-h2: #ff0057; 
+    --sombra-texto-h2: -1px 1px 1px white;
+    --color-h3: #fefeff;
+    --color-fondo-h3: #009688;
+    --sombra-h3: -1px 1px 1px white;
+    --color-li: #6c19ff;
+    --sombra-box-img: 26px 23px 0px 0px #FF9800; 
+    --marron-borde-boton-h2: 9px solid #f4433661;  
+    --color-li-child: rgb(255, 78, 2);
+
+    --letra-lemondrop: 'Lemondrop', sans-serif;
+    --letra-bitter: 'Bitter', serif;
+    --titillium: 'Titillium Web', sans-serif;
+}
+
+html{
+    line-height: 1;
+}
+
 body{
     background-image: linear-gradient(to right, #fad0c4 0%, #ffd1ff 100%);
 }
@@ -20,11 +43,11 @@ header{
 
 h1{
     height: 90vh;
-    font-family: 'Lemondrop', sans-serif;
+    font-family: var(--letra-lemondrop);
     text-align: center;
-    color: #d708fb;
+    color: var(--rosado);
     font-size: 3.5em;
-    text-shadow: -7px 4px 4px black;
+    text-shadow: var(--sombra-texo-h1);
     -webkit-text-stroke: 2px #00bcd4e0;
     backdrop-filter: blur( 4px );
     padding: 35px 0px 0px;
@@ -37,35 +60,39 @@ h1{
     bottom: -14px;
 }
 
-main{}
-
 section{
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
-    box-shadow: 1px 15px 41px 0px #edbaf3d4;
+    box-shadow: var(--sobra-seccion);
 }
 
 .container{
     width: 40%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 h2{
-    font-family: 'Bitter', serif;
-    color: #ff0057;
-    text-shadow: -1px 1px 1px white;
+    font-family: var(--letra-lemondrop);
+    color: var(--color-h2);
+    text-shadow: var(--sombra-h3);
     font-size: 2em;
+    border-bottom: var(--marron-borde-boton-h2);
+    border-radius: 15px;
+    padding: 0px 0px 12px;
 }
 
 h3{
-    font-family: 'Titillium Web', sans-serif;
-    color: #009688;
-    text-shadow: -1px 1px 1px white;
+    font-family: var(--titillium);
+    color: var(--color-h3);
+    background-color: var(--color-fondo-h3-h3);
+    border-radius: 13px;
+    border: 1px solid;
     font-size: 1.3em;
+    padding: 8px;
 }
 
 ul{
@@ -76,13 +103,15 @@ ul{
 
 li{
     text-align: center;
-    font-family: 'Titillium Web', sans-serif;
-    color: #6c19ff;
-    font-size: 1.2em;
+    font-family: var(--titillium);
+    color: var(--color-li);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom:10px;
 }
 
-li::marker {
-    color: #d708fb;
+li:nth-child(even) {
+    color: var(--color-li-child);
 }
 
 figure{
@@ -98,7 +127,7 @@ figure{
 
 img{
     border-radius: 61% 39% 40% 60% / 62% 44% 56% 38%;
-    box-shadow: 26px 23px 0px 0px #FF9800;
+    box-shadow: var(--sombra-box-img);
     background-position: center;
     background-size: contain;
     width: 100%;
